@@ -3,14 +3,12 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
-import Link from '@mui/material/Link';
+
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
-import Typography from '@mui/material/Typography';
+
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Snackbar from '@mui/material/Snackbar';
 import { AuthContext } from "../contexts/AuthContext";
@@ -91,7 +89,7 @@ export default function Authentication() {
             sx={{
               my: 8,
               mx: 4,
-              width: "50vw",
+              width: "60vw",
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
@@ -101,7 +99,7 @@ export default function Authentication() {
               <LockOutlinedIcon />
             </Avatar>
             <div>
-  <Button
+  <Button className='authBtn'
     variant={formState === 0 ? "contained" : "outlined"}
     onClick={() => setFormState(0)}
     sx={{ mr: 1 }}
@@ -109,7 +107,7 @@ export default function Authentication() {
     Sign In
   </Button>
 
-  <Button
+  <Button    className='authBtn'
     variant={formState === 1 ? "contained" : "outlined"}
     onClick={() => setFormState(1)}
   >
@@ -120,6 +118,7 @@ export default function Authentication() {
 
               {formState === 1? 
               <TextField
+              className='authTextfield'
                 margin="normal"
                 required
                 fullWidth
@@ -132,6 +131,7 @@ export default function Authentication() {
                 onChange={(e)=>setName(e.target.value)}
               /> : <></>}
               <TextField
+              className='authTextfield'
                 margin="normal"
                 required
                 fullWidth
@@ -144,6 +144,7 @@ export default function Authentication() {
                 onChange={(e)=>setUsername(e.target.value)}
               />
               <TextField
+              className='authTextfield'
                 margin="normal"
                 required
                 fullWidth
@@ -156,7 +157,7 @@ export default function Authentication() {
                 onChange={(e)=>setPassword(e.target.value)}
               />
               <p style={{color:"red"}}>{error}</p>
-              <Button
+              <Button    className='authBtn'
                 type="button"
                 fullWidth
                 variant="contained"

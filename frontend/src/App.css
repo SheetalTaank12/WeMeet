@@ -108,3 +108,152 @@
   height: auto;
   border-radius: 20px;
 }
+
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+
+  .navHeader h2{
+    font-size: 1.2rem !important;
+
+  }
+
+  .landingPageContainer{
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    background-position: center;
+  }
+
+  .landingPageContainer nav{
+    flex-direction: column;
+    gap: 0rem;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    text-align: center;
+  }
+
+  .landingPageContainer nav .navlist{
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .landingMainContainer{
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    padding-inline: 1rem;
+    padding-block: 1rem;
+    gap: 2rem;
+  }
+
+  .landingMainContainer div p{
+    font-size: 0.9rem;
+  }
+
+  .connectHeader{
+    font-size: 2rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) div[role="button"]{
+    margin: auto;
+    padding: 0.8rem 1.2rem;
+  }
+
+  .landingMainContainer > div:nth-child(1) div[role="button"] a{
+    font-size: 1rem;
+  }
+.authBtn.MuiButton-root {
+  font-size: 0.7rem !important;
+}
+.authTextfield .MuiInputBase-input {
+  font-size: 0.8rem !important;
+}
+
+.authTextfield .MuiInputLabel-root {
+  font-size: 0.8rem !important;
+}
+
+  .landingMainContainer > div:nth-child(2) img{
+    width: 90%;
+    height: auto;
+  }
+
+  .navbar{
+    font-size: 0.7rem;
+    gap: 1rem;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid grey;
+  }
+
+  .leftPanel>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .leftPanel div h2{
+    font-size: 1.3rem;
+  }
+
+  .historyBtn{
+    font-size: 0.8rem !important;
+  }
+  .logoutBtn{
+    font-size: 0.7rem !important;
+  }
+
+  .meetingInput .MuiInputBase-input {
+  font-size: 0.8rem !important;
+}
+
+.meetingInput .MuiInputLabel-root {
+  font-size: 0.8rem !important;
+}
+
+.joinBtn.MuiButton-root {
+  font-size: 0.8rem !important;
+}
+  .meetContainer{
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    gap: 2rem;
+    padding-inline: 1rem;
+    padding-block: 2rem;
+  }
+
+  .leftPanel{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .rightPanel{
+    width: 100%;
+    justify-content: center;
+  }
+
+  .rightPanel > img{
+    width: 85%;
+    height: auto;
+  }
+
+  .auth-background{
+    padding: 1rem;
+    text-align: center;
+  }
+
+    .meetingCodeText {
+    font-size: 0.8rem !important;
+  }
+
+  .meetingDateText {
+    font-size: 0.7rem !important;
+  }
+}

@@ -489,19 +489,22 @@ export default function VideoMeetComponent() {
     // console.log("videos: ", videos);
 
   return (
-    <div>
+    <div className='entryPage'>
         {askForUsername=== true ?
          <div>
-         <h2>Enter into Lobby</h2>
-         <TextField id="outlined-basic" label="Username" variant="outlined" value={username} onChange={(e)=>setUsername(e.target.value)} />
-         <Button variant="contained" onClick={connect}>Enter</Button>
+            
+         <h2 className='entryHeader'>Enter into Lobby</h2>
+         <div  className='entryBox'>
+         <TextField className='usernameInput' id="outlined-basic" label="Username" variant="outlined" value={username} onChange={(e)=>setUsername(e.target.value)} />
+         <Button className='enterBtn' variant="contained" onClick={connect}>Enter</Button>
+         </div>
 
          <div>
-            <video ref={localVideoRef} autoPlay muted></video>
+            <video ref={localVideoRef} autoPlay muted className='lobbyVdo'></video>
             
            { console.log("LOCAL:", video)}
 {console.log("REMOTE:", videos)}
-            <h2>Local Stream ID: {video?.id}</h2>
+            <h2 className='localStreamId'>Local Stream ID: {video?.id}</h2>
            </div> 
             
             </div> : 
@@ -512,22 +515,22 @@ export default function VideoMeetComponent() {
 
                         <div className="chatContainer">
 
-                             <h1>Chat</h1>
+                             <h1 className="chatHeading">Chat</h1>
                              <div className="chattingDisplay">
                                 {messages.length>0? messages.map((msg, index) => {
                                     return (
-                                    <div style={{ marginBottom: '10px' }} key={index}>
-                                        <strong>{msg.sender}:</strong> {msg.data}
+                                    <div className="messageBox"  key={index}>
+                                        <strong className="messageSender">{msg.sender}:</strong> <span className="messageText">{msg.data}</span> 
                                     </div>
                                     )
                        }
-                             ) : <p>No messages yet</p>}
+                             ) : <p className="noMessagesText">No messages yet</p>}
                              </div>
                              <div className="chattingArea">
 
-                                <TextField value={message} onChange={(e)=>{setMessage(e.target.value)}} id="outlined-basic" label="Type a message" variant="outlined" />
+                                <TextField className="chatInput" value={message} onChange={(e)=>{setMessage(e.target.value)}} id="outlined-basic" label="Type a message" variant="outlined" />
 
-                                <Button onClick={sendMessage} variant="contained" style={{margin:"0 10px"}} >Send</Button>  
+                                <Button className="sendBtn" onClick={sendMessage} variant="contained" style={{margin:"0 10px"}} >Send</Button>  
 
 
 
@@ -543,24 +546,24 @@ export default function VideoMeetComponent() {
                 }
 
                 <div className="buttonsContainer">
-                    <IconButton onClick={handleVideo} style={{color:"white"}}>
+                    <IconButton className="controlBtn" onClick={handleVideo} style={{color:"white"}}>
                         {(video === true)?<VideoCamIcon/>: <VideoCamOffIcon/>}
                     </IconButton>
 
-                    <IconButton onClick={handleEndCall} style={{color:"red"}}>
+                    <IconButton className="endCallBtn" onClick={handleEndCall} style={{color:"red"}}>
                         <CallEndIcon/>
                     </IconButton>
 
-                    <IconButton onClick={handleAudio} style={{color:"white"}}>
+                    <IconButton className="controlBtn" onClick={handleAudio} style={{color:"white"}}>
                         {(audio === true)?<MicIcon/>: <MicOffIcon/>}
                     </IconButton>
 
-                    {screenAvaiable === true && <IconButton onClick={handleScreen} style={{color:"white"}}>
+                    {screenAvaiable === true && <IconButton className="controlBtn" onClick={handleScreen} style={{color:"white"}}>
                         {screen === true? <ScreenShareIcon/>: <ScreenShareOffIcon/>}
                     </IconButton>}
 
-                    <Badge badgeContent={newMessages} max={999} style={{color:"white"}} >
-                        <IconButton onClick={()=>setShowModel(!showModel)} style={{color:"white"}}>
+                    <Badge className="chatBadge" badgeContent={newMessages} max={999} style={{color:"white"}} >
+                        <IconButton className="controlBtn" onClick={()=>setShowModel(!showModel)} style={{color:"white"}}>
                             <ChatIcon/>
                         </IconButton>
 

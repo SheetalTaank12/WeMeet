@@ -9,7 +9,7 @@ export default function LandingPage() {
           <h2>WeMeet</h2>
         </div>
         <div className='navlist'>
-          <Link to={"/demo123"} style={{textDecoration:"none", color:"white"}}>Join As Guest</Link>
+          <Link to={"/home"} style={{textDecoration:"none", color:"white"}}>Join As Guest</Link>
           <Link to={"/auth"} style={{textDecoration:"none", color:"white"}}>Register</Link>
           <div role='button'>
             <Link to={"/auth"} style={{textDecoration:"none", color:"white"}}>Login</Link>
@@ -19,7 +19,7 @@ export default function LandingPage() {
 
       <div className='landingMainContainer'>
         <div>
-          <h1><span style={{color:"#FF9839"}}>Connect</span> with your loved Ones</h1>
+          <h1 className='connectHeader'><span style={{color:"#FF9839"}}>Connect</span> with your loved Ones</h1>
           <p>Join our community and connect with friends and family anytime, anywhere.</p>
           <div role='button' style={{display:"flex", alignItems:"center", justifyContent:"center"}}>
             <Link to={"/auth"} >Get Started</Link>

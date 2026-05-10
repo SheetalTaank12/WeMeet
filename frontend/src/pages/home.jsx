@@ -4,7 +4,7 @@ import "../App.css";
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { Button, IconButton } from '@mui/material';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+
 import RestoreIcon from '@mui/icons-material/Restore';
 import TextField from '@mui/material/TextField';
 import { AuthContext } from '../contexts/AuthContext';
@@ -29,7 +29,7 @@ import { AuthContext } from '../contexts/AuthContext';
 
        <div style={{display:"flex", alignItems:"center"}}>
 
-        <IconButton onClick={()=>{
+        <IconButton className='historyBtn' onClick={()=>{
           navigate('/history')
         }}>
           <RestoreIcon/>
@@ -37,7 +37,7 @@ import { AuthContext } from '../contexts/AuthContext';
         </IconButton>
       
 
-        <Button onClick={()=>{localStorage.removeItem("token")
+        <Button className='logoutBtn' onClick={()=>{localStorage.removeItem("token")
           navigate("/auth")
         }} variant="contained" color="secondary">
           Logout
@@ -53,8 +53,8 @@ import { AuthContext } from '../contexts/AuthContext';
           <h2>Providing Quality Video Call Just Like Quality Education</h2>
 
           <div style={{display:"flex", gap:"10px"}}>
-            <TextField onChange={e=> setMeetingCode(e.target.value)} id="outlined-basic" label="Meeting code" variant="outlined"></TextField>
-            <Button onClick={handleVideoCall} variant='contained'>Join</Button>
+            <TextField className="meetingInput" onChange={e=> setMeetingCode(e.target.value)} id="outlined-basic" label="Meeting code" variant="outlined"></TextField>
+            <Button className="joinBtn" onClick={handleVideoCall} variant='contained'>Join</Button>
           </div>
         </div>
 

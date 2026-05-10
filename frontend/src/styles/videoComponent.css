@@ -13,6 +13,23 @@
     border-radius: 20px;
 }
 
+
+.chattingDisplay {
+  height: 65%;
+  overflow-y: auto;
+  overflow-x: hidden;
+flex: 1;
+  min-height: 0;
+  padding: 10px;
+
+  display: flex;
+  flex-direction: column;
+
+  word-break: break-word;
+  gap: 0.2rem;
+}
+
+
 .buttonsContainer{
     position: absolute;
     width: 100vw;
@@ -60,4 +77,225 @@
     position: absolute;
     bottom: 10px;
     z-index: 12;
+    flex-shrink: 0;
+}
+
+.lobbyVdo{
+    width: 50vw;
+    margin-top: 1rem;
+    padding-inline: 1rem;
+}
+
+.entryBox{
+    display: flex;
+    gap: 1rem;
+    padding-inline: 1rem;
+
+}
+.usernameInput .MuiInputBase-input {
+  font-size: 0.9rem !important;
+}
+
+.usernameInput .MuiInputLabel-root {
+  font-size: 0.9rem !important;
+}
+
+.enterBtn.MuiButton-root {
+  font-size: 0.85rem !important;
+}
+
+.entryHeader{
+    padding-left: 1rem;
+  }
+
+ .messageBox {
+  
+  max-width: 100%;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+} 
+
+.messageText {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+@media (max-width: 768px) {
+
+  .chattingDisplay{
+    height: 50%;
+    padding-bottom: 5rem;
+  }
+
+  .localStreamId{
+    font-size: 1rem;
+    padding-inline: 1rem;
+  }
+   .usernameInput .MuiInputBase-input {
+    font-size: 0.8rem !important;
+  }
+
+  .usernameInput .MuiInputLabel-root {
+    font-size: 0.8rem !important;
+  }
+
+  .enterBtn.MuiButton-root {
+    font-size: 0.75rem !important;
+  }
+  .entryHeader{
+    padding-left: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .meetVideoContainer{
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .conferenceVideo{
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .conferenceVideo video{
+    width: 90%;
+    min-width: unset;
+    height: auto;
+    height: 20vh;
+    border-radius: 15px;
+  }
+
+  .meetUserVideo{
+    position: fixed;
+    bottom: 12vh;
+    left: 10px;
+    width: 40vw;
+    height: auto;
+    max-height: 18vh;
+    border-radius: 15px;
+    z-index: 10;
+  }
+
+  .buttonsContainer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.4);
+    padding: 0.5rem 0;
+    z-index: 20;
+  }
+
+  .buttonsContainer svg{
+    font-size: 2.5rem;
+    margin-inline: 0.5rem;
+  }
+
+  .chatRoom{
+    position: fixed;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 60vh;
+    border-radius: 0;
+    padding: 1rem;
+    z-index: 30;
+  }
+
+  .chatContainer{
+    height: 100%;
+    
+    width: 80%;
+  }
+
+  .chattingArea{
+    position: absolute;
+    bottom: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    padding: 0.5rem;
+    z-index: 35;
+  }
+
+  .chatHeading {
+    font-size: 1rem;
+  }
+
+  .messageBox {
+    font-size: 0.75rem;
+  }
+  
+
+  .noMessagesText {
+    font-size: 0.75rem;
+  }
+
+  .chattingArea {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    
+  }
+
+  .chatInput {
+    width: 90%;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .sendBtn {
+    width: 90%;
+    margin: 0 !important;
+  }
+
+  .chatInput .MuiInputBase-input {
+    font-size: 0.75rem !important;
+    height: 0.7rem !important;
+  }
+
+  .chatInput .MuiInputLabel-root {
+    font-size: 0.75rem !important;
+    
+  }
+
+  .sendBtn.MuiButton-root {
+    font-size: 0.75rem !important;
+     min-height: 0.8rem !important;
+  }
+  
+.lobbyVdo{
+    width: 90vw;
+    margin-top: 1rem;
+}
+
+.entryPage{
+    padding: 0;
+    
+}
+.buttonsContainer {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .controlBtn svg,
+  .endCallBtn svg {
+    font-size: 1.3rem !important;
+  }
+
+  .controlBtn.MuiIconButton-root,
+  .endCallBtn.MuiIconButton-root {
+    padding: 8px !important;
+  }
+
 }
